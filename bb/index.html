@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鄭玉珍的網站</title>
+
+    <style>
+        /* 設定整個網頁背景 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FBC599; /* 淺藍背景 */
+        }
+
+        /* 頁面標題 */
+        h1 {
+            text-align: center;
+            color: rgb(255, 99, 71); /* 番茄紅 */
+            font-size: 48px;
+            margin-top: 20px;
+        }
+
+        /* 副標題 */
+        h2, h3 {
+            text-align: center;
+            color: #333; /* 黑色 */
+        }
+
+        /* 設定頁面內容區域為 Flex 布局 */
+        .container {
+            display: flex;
+            justify-content: space-between; /* 讓元素在水平方向上分散對齊 */
+            padding: 20px;
+        }
+
+        /* 每個格子 */
+        .box {
+            flex: 1; /* 讓每個區塊等比例分配空間 */
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        /* 左側區塊顏色 */
+        #box1 {
+            background-color: #F76F60; 
+        }
+
+        /* 中間區塊顏色 */
+        #box2 {
+            background-color: #CDBB93; 
+            color: black;
+        }
+
+        /* 右側區塊顏色 */
+        #box3 {
+            background-color: #A7C18B;
+            color: black;
+        }
+
+        /* 歌詞與段落設置 */
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* 定義定義列表 */
+        dl {
+            text-align: left;
+            margin: 20px auto;
+            width: 80%;
+            font-size: 18px;
+        }
+
+        /* 頁腳設置 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 網頁標題 -->
+    <h1>資管系首頁</h1>
+    <ul>
+        <a href="https://www.cna.com.tw/postwrite/chi/297535">資訊管理學系是什麼？</a><br>   
+    </ul>
+    <h2></h2>
+    <h3></h3>
+
+    <!-- 網頁內容區域，包含左、中、右三個格子 -->
+    <div class="container">
+        <!-- 左側區塊 -->
+        <div id="box1" class="box">
+            <p>資訊管理學系是什麼？<br>資訊管理學系培育學生以資訊處理應用及管理等專長，協助企業組織達成策略目標。除了要學習電腦、網路及多媒體的作業技能以外，還須具備管理及數據分析等相關能力，是大數據及AI人工智慧領域所看重的人才專長。</p>
+        </div>
+
+        <!-- 中間區塊 -->
+        <div id="box2" class="box">
+            <p>資訊管理學系學什麼專業能力？<br>資訊管理學系主要培養學生具備以下3大實務能力：<br>
+                1.電腦網路作業能力：包含電腦程式設計、網站架設、數據資料庫應用、手機軟體開發等資訊相關的作業能力。<br>
+                2.企業管理能力：學習行銷規劃、組織管理、財務管理、人事管理等企業經營相關的管理能力。<br>
+                3.數據統計、分析能力：透過微積分、基礎統計學等課程，培養學生數理相關的分析能力。</p>
+        </div>
+
+        <!-- 右側區塊 -->
+        <div id="box3" class="box">
+            <h3>資管系評價好嗎？如何培養學生的專業能力？</h3>
+            <dl>
+                <dt>1.資訊管理組</dt>
+                <dd>以時下最熱門的電子商務、數位設計為重，為了讓學生能夠運用資訊科技、管理能力來為企業製作資訊應用系統、維護系統運作，資訊管理組會給予學生程式、軟體開發、企業資源規劃程式設計、網路與資訊安全技術、大數據資料分析等課程訓練。</dd>
+                <dt>2.資訊科技組</dt>
+                <dd>在人手一機的時代，軟體、程式及演算法是每個人每天都會接觸的，因此資訊科技組著重於此，訓練學生電腦或手機的軟體開發、效能提升及障礙排除的作業能力，提供iOS程式設計、演算法、人工智慧作業平台等課程。</dd>
+                <dt>3.網路科技組</dt>
+                <dd>培養學生架設、管理網際網路服務及物聯網的作業能力，網路科技組將會修習Linux認證、雲端運算、無線網路技術等課程。</dd>
+            </dl>
+        </div>
+    </div>
+    <a href="./">回首頁</a><br>
+    <!-- 頁底 -->
+    <footer>
+        鄭玉珍的網站 © 2024
+    </footer>
+</body>
+</html>
