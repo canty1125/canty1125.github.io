@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鄭玉珍的網站</title>
+
+    <style>
+        /* 設定整個網頁背景 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #BF90C9; /* 淺藍背景 */
+        }
+
+        /* 頁面標題 */
+        h1 {
+            text-align: center;
+            color: rgb(255, 99, 71); /* 番茄紅 */
+            font-size: 48px;
+            margin-top: 20px;
+        }
+
+        /* 副標題 */
+        h2, h3 {
+            text-align: center;
+            color: #333; /* 黑色 */
+        }
+
+        /* 設定頁面內容區域為 Flex 布局 */
+        .container {
+            display: flex;
+            justify-content: space-between; /* 讓元素在水平方向上分散對齊 */
+            padding: 20px;
+        }
+
+        /* 每個格子 */
+        .box {
+            flex: 1; /* 讓每個區塊等比例分配空間 */
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        /* 左側區塊顏色 */
+        #box1 {
+            background-color: #A1D3D2; 
+        }
+
+        /* 中間區塊顏色 */
+        #box2 {
+            background-color: #4957a7; 
+            color: black;
+        }
+
+        /* 右側區塊顏色 */
+        #box3 {
+            background-color: #eca59a;
+            color: black;
+        }
+
+        /* 歌詞與段落設置 */
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* 定義定義列表 */
+        dl {
+            text-align: left;
+            margin: 20px auto;
+            width: 80%;
+            font-size: 18px;
+        }
+
+        /* 頁腳設置 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 網頁標題 -->
+    <h1>資工系首頁</h1>
+    <ul>
+        <a href="https://www.tkbgo.com.tw/schoolZone/transfer/article/toDetail?article_id=1542">資訊工程學系是什麼？</a><br>   
+    </ul>
+    <h2></h2>
+    <h3></h3>
+    <!-- 網頁內容區域，包含左、中、右三個格子 -->
+    <div class="container">
+        <!-- 左側區塊 -->
+        <div id="box1" class="box">
+            <p>資訊工程(Computer Science and Information Engineering)<br>期是隸屬於電機工程學系下的計算機組，隨著計算機科學的發展在當時的迅速起飛，才被獨立出資訊工程系。</p>
+        </div>
+
+        <!-- 中間區塊 -->
+        <div id="box2" class="box">
+            <p>早期的資訊科學 (information science)<br>隸屬於理學院之下，主要較偏向於資訊的理論研究部份。</p>
+        </div>
+
+        <!-- 右側區塊 -->
+        <div id="box3" class="box">
+            <h3></h3>
+            <dl>
+               <dd> 資訊工程較偏重在資訊科技應用的方面，如何將資訊經由規劃、運算、整合，並且使用於實務上。
+
+而資訊科學則著重資訊理論的探討，較專注在資訊的假設、邏輯演繹與分析上。</dd>
+                <dt>資訊工程與資訊科學在資訊領域的發展演進下，近年來已逐漸走向統合，雖部分學校仍保留兩個領域的差異性，但師資與資源早已相互密切交集。</dt>
+            </dl>
+        </div>
+    </div>
+
+    <a href="./">回上頁</a><br>
+
+    <!-- 頁底 -->
+    <footer>
+        鄭玉珍的網站 © 2024
+    </footer>
+</body>
+</html>
