@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電機系首頁
+
+    </title>
+
+    <style>
+        /* 設定整個網頁背景 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFDDAA; /* 淺藍背景 */
+        }
+
+        /* 頁面標題 */
+        h1 {
+            text-align: center;
+            color: rgb(255, 99, 71); /* 番茄紅 */
+            font-size: 48px;
+            margin-top: 20px;
+        }
+
+        /* 副標題 */
+        h2, h3 {
+            text-align: center;
+            color: #333; /* 黑色 */
+        }
+
+        /* 設定頁面內容區域為 Flex 布局 */
+        .container {
+            display: flex;
+            justify-content: space-between; /* 讓元素在水平方向上分散對齊 */
+            padding: 20px;
+        }
+
+        /* 每個格子 */
+        .box {
+            flex: 1; /* 讓每個區塊等比例分配空間 */
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        /* 左側區塊顏色 */
+        #box1 {
+            background-color: #888800; 
+        }
+
+        /* 中間區塊顏色 */
+        #box2 {
+            background-color: #886600; 
+            color: black;
+        }
+
+        /* 右側區塊顏色 */
+        #box3 {
+            background-color: rgb(187, 255, 0);
+            color: black;
+        }
+
+        /* 歌詞與段落設置 */
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        /* 定義定義列表 */
+        dl {
+            text-align: left;
+            margin: 20px auto;
+            width: 80%;
+            font-size: 18px;
+        }
+
+        /* 頁腳設置 */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 網頁標題 -->
+    <h1>電機系首頁</h1>
+    <ul>
+        <a href="https://pansci.asia/archives/116346">「電機系憑什麼為二類榜首？」</a><br>   
+        </ul>
+    <h2></h2>
+    <h3></h3>
+
+    <!-- 網頁內容區域，包含左、中、右三個格子 -->
+    <div class="container">
+        <!-- 左側區塊 -->
+        <div id="box1" class="box">
+            <p>1. 台灣科技業多以硬體為主，電機系主要培養的就是硬體人才。<br>
+                2. 任何跟電有關的東西，皆屬於電機範疇。例如：電腦，電話，電視，電影。<br>
+                3. 電機範疇廣，所以畢業後工作的確相對好找。至於薪水是否比較好，可能就得看每個人研究的領域與能力了。 <br></p>
+        </div>
+
+        <!-- 中間區塊 -->
+        <div id="box2" class="box">
+            <p>以清大電機來說，主要分成系統組、電力組、電子所、通訊所、光電所。<br>
+                系統組又可以分為系統 A 組和系統 B 組，而系統 A 組主要是數位訊號處理相關的領域，系統 B 組則是 IC 系統相關。<br>
+                電力則是研究能源動力相關。<br>
+                電子所是有關半導體的研究。<br>
+                通訊所是有關無線，有線的通訊都包含。<br>
+                光電所是研究光電原理和材料。<br>
+            </p>
+        </div>
+
+        <!-- 右側區塊 -->
+        <div id="box3" class="box">
+            <h3>電機系未來能幹嘛？</h3>
+            <dl>
+                
+老實說，電機系未來出路很廣。不管是成為軟體工程師或者硬體工程師都大有人在。或許有人會懷疑「電機系從事軟體工程師？軟體不是資工系嗎？」這個問題我會在第三題回答大家。在此就先讓我對整個大電機環境做簡介吧。以 104 人力銀行資料顯示，有 40% 左右的畢業生會從事硬體相關工作，不管是半導體工程師、電子工程師、製程工程師、或是 IC 封裝工程師，而另外有 10% 從事軟體工程師。
+            </dl>
+        </div>
+    </div>
+    <a href="index.html">回上頁</a><br>
+    <!-- 頁底 -->
+    <footer>
+        鄭玉珍的網站 © 2024
+    </footer>
+</body>
+</html>
