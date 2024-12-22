@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>安親班點名系統</title>
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <h1>安親班點名系統</h1>
+    <button onclick="exportData()">匯出報表</button>
+    <button onclick="addStudent()">新增學生</button>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>狀態</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody id="student-table"></tbody>
+    </table>
+</body>
+</html>
