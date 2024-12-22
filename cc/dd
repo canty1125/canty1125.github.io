@@ -1,0 +1,6 @@
+attendance_system/
+├── app.py         # 後端伺服器（Flask）
+├── templates/
+│   └── index.html # 前端 HTML
+└── static/
+    └── script.js  # 前端 JavaScript
