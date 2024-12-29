@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>國內旅遊報名表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        select, input[type="text"], input[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>國內旅遊報名表</h1>
+        <form action="/submit" method="POST">
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="region">選擇地區：</label>
+            <select id="region" name="region" required>
+                <option value="">請選擇</option>
+                <option value="north">北部</option>
+                <option value="central">中部</option>
+                <option value="south">南部</option>
+                <option value="east">東部</option>
+            </select>
+
+            <label for="city">選擇縣市：</label>
+            <select id="city" name="city" required>
+                <option value="">請選擇</option>
+                <!-- 北部 -->
+                <option value="taipei" data-region="north">臺北市</option>
+                <option value="new_taipei" data-region="north">新北市</option>
+                <option value="keelung" data-region="north">基隆市</option>
+                <!-- 中部 -->
+                <option value="taichung" data-region="central">臺中市</option>
+                <option value="changhua" data-region="central">彰化縣</option>
+                <option value="nantou" data-region="central">南投縣</option>
+                <!-- 南部 -->
+                <option value="kaohsiung" data-region="south">高雄市</option>
+                <option value="tainan" data-region="south">臺南市</option>
+                <option value="pingtung" data-region="south">屏東縣</option>
+                <!-- 東部 -->
+                <option value="hualien" data-region="east">花蓮縣</option>
+                <option value="taitung" data-region="east">臺東縣</option>
+            </select>
+
+            <label for="address">地址：</label>
+            <input type="text" id="address" name="address" placeholder="路名">
+            <input type="text" name="lane" placeholder="巷">
+            <input type="text" name="alley" placeholder="弄">
+            <input type="text" name="number" placeholder="號">
+            <input type="text" name="floor" placeholder="樓">
+            <input type="text" name="sub_number" placeholder="之">
+
+            <input type="submit" value="提交">
+        </form>
+    </div>
+
+    <script>
+        // 根據選擇的地區篩選縣市選項
+        document.getElementById('region').addEventListener('change', function() {
+            const region = this.value;
+            const citySelect = document.getElementById('city');
+
+            for (const option of citySelect.options) {
+                option.style.display = option.dataset.region === region || option.value === '' ? 'block' : 'none';
+            }
+
+            citySelect.value = ''; // 重置縣市選擇
+        });
+    </script>
+</body>
+</html>
