@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旅遊的網站</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F3FF96;
+        }
+
+        h1 {
+            text-align: center;
+            color: #F7CBCB;
+            font-size: 48px;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .box {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #box1 { background-color: #A8E9ED; }
+        #box2 { background-color: #886600; color: black; }
+        #box3 { background-color: #FFBFFD; color: black; }
+        #box4 { background-color: #FFC300; color: black; }
+        #box5 { background-color: #A1C3D1; color: black; }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            transition: left 0.5s ease-in-out;
+        }
+
+        .carousel img.active {
+            left: 0;
+        }
+
+        .carousel img.prev {
+            left: -100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>旅遊的網站</h1>
+    <div class="container">
+        
+        <div id="box1" class="box">
+            <ul>
+                <h2> <a href=https://www.taiwan.net.tw/m1.aspx?sNo=0000501>北部旅遊的網站</a><h2>
+            <div class="carousel">
+                <img src="image1.jpg" alt="Image 1" class="active">
+                <img src="image2.jpg" alt="Image 2">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+        </div>
+        <div id="box2" class="box">
+            <h2><a href=https://www.taiwan.net.tw/m1.aspx?sNo=0000502>中部旅遊的網站</a></h2>
+            <div class="carousel">
+                <img src="image4.jpg" alt="Image 4" class="active">
+                <img src="image5.jpg" alt="Image 5">
+                <img src="image6.jpg" alt="Image 6">
+            </div>
+        </div>
+        <div id="box3" class="box">
+            <h2><a href=https://www.taiwan.net.tw/m1.aspx?sNo=0000503>南部旅遊的網站</a></h2>
+            <div class="carousel">
+                <img src="image7.jpg" alt="Image 7" class="active">
+                <img src="image8.jpg" alt="Image 8">
+                <img src="image9.jpg" alt="Image 9">
+            </div>
+        </div>
+        <div id="box4" class="box">
+            <h2><a href=https://www.taiwan.net.tw/m1.aspx?sNo=0000504>東部旅遊的網站</a></h2>
+            <div class="carousel">
+                <img src="image10.jpg" alt="Image 10" class="active">
+                <img src="image11.jpg" alt="Image 11">
+                <img src="image12.jpg" alt="Image 12">
+            </div>
+        </div>
+        <div id="box5" class="box">
+            <h2><a href=https://www.taiwan.net.tw/m1.aspx?sNo=0000505>離島旅遊的網站</a></h2>
+            <div class="carousel">
+                <img src="image13.jpg" alt="Image 13" class="active">
+                <img src="image14.jpg" alt="Image 14">
+                <img src="image15.jpg" alt="Image 15">
+            </div>
+        </div>    
+    </div>
+    <script>
+        document.querySelectorAll('.carousel').forEach(carousel => {
+            const images = carousel.querySelectorAll('img');
+            let current = 0;
+
+            function updateCarousel() {
+                images.forEach((img, index) => {
+                    img.classList.remove('active', 'prev');
+                    if (index === current) {
+                        img.classList.add('active');
+                    } else if (index === (current - 1 + images.length) % images.length) {
+                        img.classList.add('prev');
+                    }
+                });
+            }
+
+            function nextImage() {
+                current = (current + 1) % images.length;
+                updateCarousel();
+            }
+
+            setInterval(nextImage, 3000); // 切換時間為 3 秒
+        });
+    </script>
+    <a href="./">回上頁</a><br>
+    <!-- 頁底 -->
+    <footer>
+        鄭玉珍的網站 © 2024
+    </footer>
+</body>
+</html>
