@@ -1,0 +1,47 @@
+<<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成 QR Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .qr-code {
+            margin-top: 20px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>生成 QR Code</h1>
+    <p>請輸入文字或網址，然後按下按鈕生成 QR Code。</p>
+    <input type="text" id="text-input" placeholder="輸入文字或網址" size="30">
+    <button onclick="generateQRCode()">生成 QR Code</button>
+    <div class="qr-code" id="qr-code"></div>
+
+    <script>
+        function generateQRCode() {
+            const text = document.getElementById('text-input').value;
+            const qrCodeContainer = document.getElementById('qr-code');
+
+            if (!text) {
+                alert('請輸入文字或網址！');
+                return;
+            }
+
+            // 使用 Google Chart API 生成 QR Code
+            const qrCodeUrl = `https://chart.googleapis.com/chart?cht=qr&chs=300x300&chl=${encodeURIComponent(text)}&choe=UTF-8`;
+
+            qrCodeContainer.innerHTML = `<img src="${qrCodeUrl}" alt="QR Code">`;
+        }
+    </script>
+</body>
+</html>
