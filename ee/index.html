@@ -21,16 +21,20 @@
 
         .container {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
             padding: 20px;
         }
 
         .box {
-            flex: 1;
+            flex: 1 1 calc(33.33% - 20px); /* 預設每行最多三個 */
             margin: 10px;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
+            background-color: #FFD6A5;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
 
         #box1 { background-color: #A8E9ED; }
@@ -64,24 +68,48 @@
         .carousel img.prev {
             left: -100%;
         }
-        /* 頁腳設置 */
+
         footer {
-            background-color: #666;
-            color: white;
             text-align: center;
-            padding: 20px;
-            font-size: 14px;
             margin-top: 20px;
+            padding: 10px;
+            background-color: #F7CBCB;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 1024px) {
+            .box {
+                flex: 1 1 calc(50% - 20px); /* 平板模式每行兩個 */
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                flex: 1 1 100%; /* 手機模式每行一個 */
+            }
+
+            h1 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
 <body>
     <h1>旅遊的網站</h1>
     <div class="container">
-        
         <div id="box1" class="box">
-            <ul>
-                <h2> <a href=https://www.taiwan.net.tw/m1.aspx?sNo=0000501>北部旅遊的網站</a><h2>
+            <h2><a href="https://www.taiwan.net.tw/m1.aspx?sNo=0000501">北部旅遊的網站</a></h2>
             <div class="carousel">
                 <img src="image1.jpg" alt="Image 1" class="active">
                 <img src="image2.jpg" alt="Image 2">
@@ -89,7 +117,7 @@
             </div>
         </div>
         <div id="box2" class="box">
-            <h2><a href=https://www.taiwan.net.tw/m1.aspx?sNo=0000502>中部旅遊的網站</a></h2>
+            <h2><a href="https://www.taiwan.net.tw/m1.aspx?sNo=0000502">中部旅遊的網站</a></h2>
             <div class="carousel">
                 <img src="image4.jpg" alt="Image 4" class="active">
                 <img src="image5.jpg" alt="Image 5">
@@ -97,7 +125,7 @@
             </div>
         </div>
         <div id="box3" class="box">
-            <h2><a href=https://www.taiwan.net.tw/m1.aspx?sNo=0000503>南部旅遊的網站</a></h2>
+            <h2><a href="https://www.taiwan.net.tw/m1.aspx?sNo=0000503">南部旅遊的網站</a></h2>
             <div class="carousel">
                 <img src="image7.jpg" alt="Image 7" class="active">
                 <img src="image8.jpg" alt="Image 8">
@@ -105,7 +133,7 @@
             </div>
         </div>
         <div id="box4" class="box">
-            <h2><a href=https://www.taiwan.net.tw/m1.aspx?sNo=0000504>東部旅遊的網站</a></h2>
+            <h2><a href="https://www.taiwan.net.tw/m1.aspx?sNo=0000504">東部旅遊的網站</a></h2>
             <div class="carousel">
                 <img src="image10.jpg" alt="Image 10" class="active">
                 <img src="image11.jpg" alt="Image 11">
@@ -113,13 +141,13 @@
             </div>
         </div>
         <div id="box5" class="box">
-            <h2><a href=https://www.taiwan.net.tw/m1.aspx?sNo=0000505>離島旅遊的網站</a></h2>
+            <h2><a href="https://www.taiwan.net.tw/m1.aspx?sNo=0000505">離島旅遊的網站</a></h2>
             <div class="carousel">
                 <img src="image13.jpg" alt="Image 13" class="active">
                 <img src="image14.jpg" alt="Image 14">
                 <img src="image15.jpg" alt="Image 15">
             </div>
-        </div>    
+        </div>
     </div>
     <script>
         document.querySelectorAll('.carousel').forEach(carousel => {
@@ -142,13 +170,13 @@
                 updateCarousel();
             }
 
-            setInterval(nextImage, 3000); // 切換時間為 3 秒
+            setInterval(nextImage, 3000); // 每 3 秒切換圖片
         });
     </script>
-    <a href="../">回首頁</a><br>
-    <!-- 頁底 -->
     <footer>
         鄭玉珍的網站 © 2024
+        <br>
+        <a href="../">回上頁</a>
     </footer>
 </body>
 </html>
